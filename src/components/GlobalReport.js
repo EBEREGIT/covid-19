@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Jumbotron, Table } from "react-bootstrap/";
-import NumberFormat from 'react-number-format';
-import Moment from 'react-moment';
+import NumberFormat from "react-number-format";
+import Moment from "react-moment";
 
 export default class GlobalReport extends Component {
   constructor(props) {
@@ -18,7 +18,8 @@ export default class GlobalReport extends Component {
         this.setState({
           report: json
         });
-      }).catch(error => {
+      })
+      .catch(error => {
         this.setState({
           error
         });
@@ -26,7 +27,7 @@ export default class GlobalReport extends Component {
   }
   render() {
     let { report } = this.state;
-    
+
     return (
       <div>
         <Jumbotron>
@@ -44,42 +45,93 @@ export default class GlobalReport extends Component {
               <tr>
                 <td>1</td>
                 <td>Total Confirmed</td>
-                <td><NumberFormat value={report.totalConfirmed} displayType={'text'} thousandSeparator={true} prefix={''} /></td>
+                <td>
+                  <NumberFormat
+                    value={report.totalConfirmed}
+                    displayType={"text"}
+                    thousandSeparator={true}
+                    prefix={""}
+                  />
+                </td>
               </tr>
               <tr>
                 <td>2</td>
                 <td>Total Deaths</td>
-                <td><NumberFormat value={report.totalDeaths} displayType={'text'} thousandSeparator={true} prefix={''} /></td>
+                <td>
+                  <NumberFormat
+                    value={report.totalDeaths}
+                    displayType={"text"}
+                    thousandSeparator={true}
+                    prefix={""}
+                  />
+                </td>
               </tr>
               <tr>
                 <td>3</td>
                 <td>Total Recovered</td>
-                <td><NumberFormat value={report.totalRecovered} displayType={'text'} thousandSeparator={true} prefix={''} /></td>
+                <td>
+                  <NumberFormat
+                    value={report.totalRecovered}
+                    displayType={"text"}
+                    thousandSeparator={true}
+                    prefix={""}
+                  />
+                </td>
               </tr>
               <tr>
                 <td>4</td>
                 <td>Total New Cases</td>
-                <td><NumberFormat value={report.totalNewCases} displayType={'text'} thousandSeparator={true} prefix={''} /></td>
+                <td>
+                  <NumberFormat
+                    value={report.totalNewCases}
+                    displayType={"text"}
+                    thousandSeparator={true}
+                    prefix={""}
+                  />
+                </td>
               </tr>
               <tr>
                 <td>5</td>
                 <td>Total New Deaths</td>
-                <td><NumberFormat value={report.totalNewDeaths} displayType={'text'} thousandSeparator={true} prefix={''} /></td>
+                <td>
+                  <NumberFormat
+                    value={report.totalNewDeaths}
+                    displayType={"text"}
+                    thousandSeparator={true}
+                    prefix={""}
+                  />
+                </td>
               </tr>
               <tr>
                 <td>6</td>
                 <td>Total Active Cases</td>
-                <td><NumberFormat value={report.totalActiveCases} displayType={'text'} thousandSeparator={true} prefix={''} /></td>
+                <td>
+                  <NumberFormat
+                    value={report.totalActiveCases}
+                    displayType={"text"}
+                    thousandSeparator={true}
+                    prefix={""}
+                  />
+                </td>
               </tr>
               <tr>
                 <td>7</td>
                 <td>Total Cases Per Million Population</td>
-                <td><NumberFormat value={report.totalCasesPerMillionPop} displayType={'text'} thousandSeparator={true} prefix={''} /></td>
+                <td>
+                  <NumberFormat
+                    value={report.totalCasesPerMillionPop}
+                    displayType={"text"}
+                    thousandSeparator={true}
+                    prefix={""}
+                  />
+                </td>
               </tr>
               <tr>
                 <td>8</td>
                 <td>Last Updated</td>
-                <td><Moment>{report.created}</Moment></td>
+                <td>
+                  <Moment>{report.created}</Moment>
+                </td>
               </tr>
             </tbody>
           </Table>

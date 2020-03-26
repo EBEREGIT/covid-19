@@ -1,11 +1,13 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import GlobalReport from './components/GlobalReport';
+import NavComponent from './components/NavComponent';
 
 function App() {
   return (
     <div className="App">
-      <GlobalReport/>
+      <NavComponent />
+      <GlobalReport />
     </div>
   );
 }

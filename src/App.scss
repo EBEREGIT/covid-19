@@ -1,0 +1,35 @@
+body {
+    .jumbotron{
+        padding-top: 0;
+        h1{
+            padding-top: 1%;
+        }
+
+        table{
+            thead{
+                font-size: 1.5rem;
+            }
+            tbody{
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    header {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        img{
+            padding: 1%;
+            height: 10%;
+        }
+
+        .nav-item {
+            a {
+                padding-top: 5% !important;
+                padding-bottom: 5% !important;
+            }
+        }
+    }
+}
