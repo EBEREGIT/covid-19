@@ -1,13 +1,17 @@
-import React from 'react';
-import './App.scss';
-import GlobalReport from './components/GlobalReport';
-import NavComponent from './components/NavComponent';
+import React from "react";
+import "./App.scss";
+import { Switch, Route } from "react-router-dom";
+import GlobalReport from "./components/GlobalReport";
+import NavComponent from "./components/NavComponent";
 
 function App() {
   return (
     <div className="App">
       <NavComponent />
-      <GlobalReport />
+
+      <Switch>
+        <Route exact path="/" component={GlobalReport} />
+      </Switch>
     </div>
   );
 }
