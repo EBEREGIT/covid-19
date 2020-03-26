@@ -1,19 +1,52 @@
 $site-red: #e50b0b;
 
 body {
-    .jumbotron{
+    .navbar {
+        a {
+            padding-right: 5%;
+        }
+
+        a:hover{
+            color: $site-red !important;
+        }
+
+        .navbar-nav {
+            .nav-link {
+                color: #ffffff !important;
+                font-size: 1.2rem;
+                margin-right: 10%;
+            }
+
+            .nav-link:hover {
+                border: 1px solid $site-red !important;
+                background-color: $site-red;
+            }
+        }
+    }
+
+    .card {
+        margin-top: 5%;
+
+        span {
+            font-weight: bold;
+        }
+    }
+
+    .jumbotron {
         padding-top: 0;
         margin-bottom: 0;
         padding-bottom: 3.8%;
-        h1{
+
+        h1 {
             padding-top: 1%;
         }
 
-        table{
-            thead{
+        table {
+            thead {
                 font-size: 1.5rem;
             }
-            tbody{
+
+            tbody {
                 font-size: 1.2rem;
             }
         }
@@ -24,15 +57,15 @@ body {
         justify-content: center;
         text-align: center;
 
-        .navbar{
-            .btn{
+        .navbar {
+            .btn {
                 color: $site-red;
                 border-color: $site-red;
                 font-weight: bold;
             }
         }
 
-        img{
+        img {
             padding: 1%;
             height: 10%;
         }
