@@ -1,6 +1,10 @@
+$site-red: #e50b0b;
+
 body {
     .jumbotron{
         padding-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 3.8%;
         h1{
             padding-top: 1%;
         }
@@ -19,6 +23,14 @@ body {
         align-items: center;
         justify-content: center;
         text-align: center;
+
+        .navbar{
+            .btn{
+                color: $site-red;
+                border-color: $site-red;
+                font-weight: bold;
+            }
+        }
 
         img{
             padding: 1%;

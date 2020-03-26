@@ -1,30 +1,34 @@
 import React from "react";
-import { Nav } from "react-bootstrap/";
+import {
+  Nav,
+  Navbar,
+  NavDropdown,
+  Form,
+  FormControl,
+  Button
+} from "react-bootstrap/";
 
 export default function NavComponent() {
   return (
     <header>
-      <img
-        src="https://res.cloudinary.com/dunksyqjj/image/upload/c_scale,h_70,w_250/v1585177612/LogoMakr_8jNJSD_wbujbu.png"
-        alt="site-log"
-      />
-      <Nav justify variant="tabs" defaultActiveKey="/home">
-        <Nav.Item>
-          <Nav.Link href="/home">Global Report</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link href="/">Countries</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link href="/">Health Care Institutions</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link href="/">News</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link href="/">Prevention</Nav.Link>
-        </Nav.Item>
-      </Nav>
+      <Navbar bg="dark" variant="dark" expand="lg">
+        <Navbar.Brand href="#home">
+          <img
+            src="https://res.cloudinary.com/dunksyqjj/image/upload/c_scale,h_50,w_250/v1585177612/LogoMakr_8jNJSD_wbujbu.png"
+            alt="site-log"
+          />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            {/* <Nav.Link href="#home">Home</Nav.Link> */}
+          </Nav>
+          <Form inline>
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <Button variant="outline-success">Search</Button>
+          </Form>
+        </Navbar.Collapse>
+      </Navbar>
     </header>
   );
 }

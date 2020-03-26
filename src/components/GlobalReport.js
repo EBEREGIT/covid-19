@@ -31,7 +31,7 @@ export default class GlobalReport extends Component {
     return (
       <div>
         <Jumbotron>
-          <h1>Covid-19 Global Report</h1>
+          <h1>Global Report</h1>
 
           <Table striped bordered hover variant="dark">
             <thead>
