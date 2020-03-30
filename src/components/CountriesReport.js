@@ -10,6 +10,7 @@ import {
 import NumberFormat from "react-number-format";
 import Moment from "react-moment";
 import Loading from "./Loading";
+import Footer from "./Footer";
 
 export default class countriesReport extends Component {
   constructor(props) {
@@ -146,6 +147,7 @@ export default class countriesReport extends Component {
                 ))}
               </Row>
             </Container>
+            <Footer />
           </Jumbotron>
         </main>
       );

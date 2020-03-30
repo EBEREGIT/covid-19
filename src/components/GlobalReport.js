@@ -3,6 +3,7 @@ import { Jumbotron, Table } from "react-bootstrap/";
 import NumberFormat from "react-number-format";
 import Moment from "react-moment";
 import Loading from "./Loading";
+import Footer from "./Footer";
 
 export default class GlobalReport extends Component {
   constructor(props) {
@@ -146,7 +147,7 @@ export default class GlobalReport extends Component {
               </tbody>
             </Table>
 
-            <p className="text-center">Created by <a href="https://www.njokusamsonebere.com/">Njoku Samson Ebere</a> for COVID-19 Awareness <a href="https://github.com/EBEREGIT/covid-19">Github</a></p>
+            <Footer />
           </Jumbotron>
         </main>
       );

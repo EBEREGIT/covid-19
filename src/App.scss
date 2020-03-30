@@ -1,6 +1,43 @@
 $site-red: #e50b0b;
 
 body {
+
+    .accordion{
+        a, button{
+            text-decoration: none !important;
+        }
+        .card{
+            margin-top: 0;
+
+            .card-header{
+                button{
+                    color: #2e3c42 !important;
+                }
+            }
+
+            .card-body{
+                .tab-content{
+                    margin-top: 2%;
+                    margin-bottom: 1%;
+
+                    table{
+                        thead{
+                            font-size: 1rem;
+                        }
+
+                        tbody{
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+
+            .card-header-tabs{
+                margin-bottom: 1%;
+                border-bottom: 1px solid #dee2e6;
+            }
+        }
+    }
     .navbar {
         a {
             padding-right: 5%;
@@ -8,6 +45,10 @@ body {
 
         a:hover{
             color: $site-red !important;
+        }
+
+        a:focus{
+            text-decoration: underline;
         }
 
         .navbar-nav {
