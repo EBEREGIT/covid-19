@@ -63,6 +63,17 @@ body {
                 background-color: $site-red;
             }
         }
+
+        form{
+            button{
+                color: #ffffff !important;
+                background-color: $site-red;
+            }
+            button:hover{
+                background-color: #343a40;
+                border-color: $site-red !important;
+            }
+        }
     }
 
     .card {
