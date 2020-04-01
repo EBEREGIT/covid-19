@@ -51,10 +51,9 @@ export default class NavComponent extends Component {
                 type="text"
                 placeholder="Search a County"
                 className="mr-sm-2"
-                // name="country"
                 onChange = {this.handleChange.bind(this)}
               />
-              <Button variant="outline-success">Search</Button>
+              <Button variant="outline-success" onClick = {this.handleSubmit.bind(this)}>Search</Button>
             </Form>
           </Navbar.Collapse>
         </Navbar>
