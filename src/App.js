@@ -48,8 +48,9 @@ export default class App extends Component {
 
   render() {
     const { country, reports } = this.state;
+    let coutrySanitized = country.trim();
 
-    if (country === "") {
+    if (coutrySanitized === "") {
       return (
         <div className="text-center">
           <NavComponent handleSearch={this.handleSearchData.bind(this)} />
@@ -62,9 +63,9 @@ export default class App extends Component {
       <div className="App">
         <NavComponent handleSearch={this.handleSearchData.bind(this)} />
         {reports.map(report =>
-          report.country === country.toUpperCase() ||
-          report.country === country.toLowerCase() ||
-          report.country === capitalize(country) ? (
+          report.country === coutrySanitized.toUpperCase() ||
+          report.country === coutrySanitized.toLowerCase() ||
+          report.country === capitalize(coutrySanitized) ? (
             <Col xs={12} sm={6} md={4} lg={3}>
               <Card className="text-center" bg="Light" variant="Light">
                 <Card.Header>
