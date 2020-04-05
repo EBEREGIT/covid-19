@@ -50,6 +50,7 @@ export default class countriesReport extends Component {
       return (
         <main>
           <Jumbotron>
+          <h1 className="text-center">Countries Report</h1>
             <Container>
               <Row>
                 {reports.map(report => (
