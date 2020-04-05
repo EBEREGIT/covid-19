@@ -52,7 +52,7 @@ export default class TreandingNews extends Component {
     } else {
       return (
         <Jumbotron>
-          <h1 className="text-center">World Trending News</h1>
+          <h1 className="text-center">Trending News</h1>
           <Container>
             <Accordion defaultActiveKey="0">
               {newsReports[1].map(report => (
