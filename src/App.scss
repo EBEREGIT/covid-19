@@ -2,52 +2,56 @@ $site-red: #e50b0b;
 
 body {
 
-    .accordion{
-        a, button{
+    .accordion {
+
+        a,
+        button {
             text-decoration: none !important;
         }
-        .card{
+
+        .card {
             margin-top: 0;
 
-            .card-header{
-                button{
+            .card-header {
+                button {
                     color: #2e3c42 !important;
                 }
             }
 
-            .card-body{
-                .tab-content{
+            .card-body {
+                .tab-content {
                     margin-top: 2%;
                     margin-bottom: 1%;
 
-                    table{
-                        thead{
+                    table {
+                        thead {
                             font-size: 1rem;
                         }
 
-                        tbody{
+                        tbody {
                             font-size: 0.8rem;
                         }
                     }
                 }
             }
 
-            .card-header-tabs{
+            .card-header-tabs {
                 margin-bottom: 1%;
                 border-bottom: 1px solid #dee2e6;
             }
         }
     }
+
     .navbar {
         a {
             padding-right: 5%;
         }
 
-        a:hover{
+        a:hover {
             color: $site-red !important;
         }
 
-        a:focus{
+        a:focus {
             text-decoration: underline;
         }
 
@@ -64,12 +68,13 @@ body {
             }
         }
 
-        form{
-            button{
+        form {
+            button {
                 color: #ffffff !important;
                 background-color: $site-red;
             }
-            button:hover{
+
+            button:hover {
                 background-color: #343a40;
                 border-color: $site-red !important;
             }

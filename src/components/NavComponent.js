@@ -53,7 +53,7 @@ export default class NavComponent extends Component {
                 className="mr-sm-2"
                 onChange = {this.handleChange.bind(this)}
               />
-              <Button variant="outline-success" onClick = {this.handleSubmit.bind(this)}>Search</Button>
+              <Button variant="outline-danger" onClick = {this.handleSubmit.bind(this)}>Search</Button>
             </Form>
           </Navbar.Collapse>
         </Navbar>
