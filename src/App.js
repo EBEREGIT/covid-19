@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from "react";
+import React, { Component } from "react";
 import "./App.scss";
 import { Switch, Route } from "react-router-dom";
 import GlobalReport from "./components/GlobalReport";
@@ -9,7 +9,6 @@ import { capitalize } from "./components/Helper";
 import { Col, Card, ListGroup } from "react-bootstrap/";
 import NumberFormat from "react-number-format";
 import Moment from "react-moment";
-import ReactGA from 'react-ga';
 
 export default class App extends Component {
   constructor(props) {
@@ -48,12 +47,6 @@ export default class App extends Component {
   }
 
   render() {
-    useEffect(() => {
-      ReactGA.initialize('UA-163224851-1');
-      // To Report Page View 
-      ReactGA.pageview(window.location.pathname + window.location.search);
-    }, [])
-    
     const { country, reports } = this.state;
     let coutrySanitized = country.trim();
 

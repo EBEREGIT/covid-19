@@ -36,13 +36,13 @@ export default class NavComponent extends Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link as={Link} to="/">
+              <Nav.Link href="/">
                 World
               </Nav.Link>
-              <Nav.Link as={Link} to="/countries">
+              <Nav.Link href="/countries">
                 Countries
               </Nav.Link>
-              <Nav.Link as={Link} to="/trending">
+              <Nav.Link href="/trending">
                 Trending
               </Nav.Link>
             </Nav>
