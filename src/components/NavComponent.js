@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { Component, Fragment } from "react";
 import { Nav, Navbar, Form, FormControl, Button } from "react-bootstrap/";
 
 export default class NavComponent extends Component {
@@ -25,8 +24,8 @@ export default class NavComponent extends Component {
 
   render() {
     return (
-      <header>
-        <Navbar bg="dark" variant="dark" expand="lg">
+      <Fragment>
+        <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
           <Navbar.Brand href="/">
             <img
               src="https://res.cloudinary.com/dunksyqjj/image/upload/c_scale,h_50,w_200/v1585177612/LogoMakr_8jNJSD_wbujbu.png"
@@ -57,7 +56,7 @@ export default class NavComponent extends Component {
             </Form>
           </Navbar.Collapse>
         </Navbar>
-      </header>
+      </Fragment>
     );
   }
 }
