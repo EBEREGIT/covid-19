@@ -63,6 +63,8 @@ export default class countriesReport extends Component {
                       </Card.Header>
                       <Card.Body>
                         <ListGroup variant="flush">
+
+                          {/* total confirmed */}
                           <ListGroup.Item>
                             Total Confirmed:{" "}
                             <NumberFormat
@@ -72,6 +74,8 @@ export default class countriesReport extends Component {
                               prefix={""}
                             />
                           </ListGroup.Item>
+
+                          {/* total deaths */}
                           <ListGroup.Item>
                             Total Deaths:{" "}
                             <NumberFormat
@@ -81,6 +85,8 @@ export default class countriesReport extends Component {
                               prefix={""}
                             />
                           </ListGroup.Item>
+
+                          {/* total recovered */}
                           <ListGroup.Item>
                             Total Recovered:{" "}
                             <NumberFormat
@@ -90,6 +96,8 @@ export default class countriesReport extends Component {
                               prefix={""}
                             />
                           </ListGroup.Item>
+
+                          {/* total comfirmed */}
                           <ListGroup.Item>
                             Today's Confirmed:{" "}
                             <NumberFormat
@@ -99,6 +107,8 @@ export default class countriesReport extends Component {
                               prefix={""}
                             />
                           </ListGroup.Item>
+
+                          {/* total deaths */}
                           <ListGroup.Item>
                             Today's Deaths:{" "}
                             <NumberFormat
@@ -108,6 +118,8 @@ export default class countriesReport extends Component {
                               prefix={""}
                             />
                           </ListGroup.Item>
+
+                          {/* active cases */}
                           <ListGroup.Item>
                             Active Cases:{" "}
                             <NumberFormat
@@ -117,6 +129,8 @@ export default class countriesReport extends Component {
                               prefix={""}
                             />
                           </ListGroup.Item>
+
+                          {/* total critical */}
                           <ListGroup.Item>
                             Total Critical:{" "}
                             <NumberFormat
@@ -126,6 +140,8 @@ export default class countriesReport extends Component {
                               prefix={""}
                             />
                           </ListGroup.Item>
+
+                          {/* Total Confirmed Per Million Population */}
                           <ListGroup.Item>
                             Total Confirmed Per Million Population:
                             <br />
@@ -138,6 +154,8 @@ export default class countriesReport extends Component {
                           </ListGroup.Item>
                         </ListGroup>
                       </Card.Body>
+
+                      {/* last updated */}
                       <Card.Footer className="text-muted">
                         Last Updated:
                         <br />

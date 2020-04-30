@@ -41,7 +41,6 @@ export default class TreandingNews extends Component {
   render() {
     let { reports, isLoaded } = this.state;
     let newsReports = Object.values(reports);
-    console.log(newsReports[1]);
 
     if (!isLoaded) {
       return (

@@ -5,6 +5,7 @@ import GlobalReport from "./components/GlobalReport";
 import NavComponent from "./components/NavComponent";
 import CountriesReport from "./components/CountriesReport";
 import TreandingNews from "./components/TreandingNews";
+import Nigeria from "./components/Nigeria";
 import { capitalize } from "./components/Helper";
 import { Col, Card, ListGroup } from "react-bootstrap/";
 import NumberFormat from "react-number-format";
@@ -166,6 +167,7 @@ export default class App extends Component {
           <Route exact path="/" component={GlobalReport} />
           <Route path="/countries" component={CountriesReport} />
           <Route path="/trending" component={TreandingNews} />
+          <Route path="/nigeria" component={Nigeria} />
         </Switch>
       </div>
     );

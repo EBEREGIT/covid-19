@@ -26,12 +26,16 @@ export default class NavComponent extends Component {
     return (
       <Fragment>
         <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
+
+          {/* logo */}
           <Navbar.Brand href="/">
             <img
               src="https://res.cloudinary.com/dunksyqjj/image/upload/c_scale,h_50,w_200/v1585177612/LogoMakr_8jNJSD_wbujbu.png"
               alt="site-log"
             />
           </Navbar.Brand>
+
+          {/* nav links */}
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
@@ -44,7 +48,12 @@ export default class NavComponent extends Component {
               <Nav.Link href="/trending">
                 Trending
               </Nav.Link>
+              <Nav.Link href="/nigeria">
+                Nigeria
+              </Nav.Link>
             </Nav>
+
+            {/* search form */}
             <Form inline onSubmit={this.handleSubmit.bind(this)} action="/search">
               <FormControl
                 type="text"
