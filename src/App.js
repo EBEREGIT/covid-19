@@ -24,7 +24,6 @@ export default class App extends Component {
     capitalize(this.state.country);
   }
 
-
   handleSearchData(stateData) {
     this.setState({
       ...stateData
@@ -165,7 +164,8 @@ export default class App extends Component {
         )}
 
         <Switch>
-          <Route exact path="/" component={GlobalReport} />
+          <Route exact path="/" />
+          <Route path="/global" component={GlobalReport} />
           <Route path="/countries" component={CountriesReport} />
           <Route path="/trending" component={TreandingNews} />
           <Route path="/nigeria" component={Nigeria} />
