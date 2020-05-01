@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import Loading from "./Loading";
 import {
   Container,
@@ -8,7 +8,7 @@ import {
   Button,
   Tab,
   Tabs,
-  Table
+  Table,
 } from "react-bootstrap/";
 import Footer from "./Footer";
 import Moment from "react-moment";
@@ -18,22 +18,22 @@ export default class TreandingNews extends Component {
     super(props);
     this.state = {
       isLoaded: false,
-      reports: []
+      reports: [],
     };
   }
 
   componentDidMount() {
     fetch("https://api.coronatracker.com/news/trending")
-      .then(res => res.json())
-      .then(json => {
+      .then((res) => res.json())
+      .then((json) => {
         this.setState({
           reports: json,
-          isLoaded: true
+          isLoaded: true,
         });
       })
-      .catch(error => {
+      .catch((error) => {
         this.setState({
-          error
+          error,
         });
       });
   }
@@ -50,11 +50,11 @@ export default class TreandingNews extends Component {
       );
     } else {
       return (
-        <Jumbotron>
+        <Fragment>
           <h1 className="text-center">Trending News</h1>
           <Container>
             <Accordion defaultActiveKey="0">
-              {newsReports[1].map(report => (
+              {newsReports[1].map((report) => (
                 <Card>
                   <Card.Header>
                     <Accordion.Toggle
@@ -112,8 +112,12 @@ export default class TreandingNews extends Component {
                             </thead>
                             <tbody>
                               <tr>
-                                <td><Moment>{report.publishedAt}</Moment></td>
-                                <td><Moment>{report.publishedAt}</Moment></td>
+                                <td>
+                                  <Moment>{report.publishedAt}</Moment>
+                                </td>
+                                <td>
+                                  <Moment>{report.publishedAt}</Moment>
+                                </td>
                                 <td>{report.siteName}</td>
                               </tr>
                             </tbody>
@@ -127,7 +131,7 @@ export default class TreandingNews extends Component {
             </Accordion>
           </Container>
           <Footer />
-        </Jumbotron>
+        </Fragment>
       );
     }
   }

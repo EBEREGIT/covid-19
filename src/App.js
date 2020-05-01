@@ -51,6 +51,7 @@ export default class App extends Component {
     const { country, reports } = this.state;
     let coutrySanitized = country.trim();
 
+    // return error if the search field is empty
     if (coutrySanitized === "") {
       return (
         <div className="text-center">
@@ -61,7 +62,7 @@ export default class App extends Component {
     } else {
 
     return (
-      <div className="App">
+      <div className="app">
         <NavComponent handleSearch={this.handleSearchData.bind(this)} />
         {reports.map(report =>
           report.country === coutrySanitized.toUpperCase() ||

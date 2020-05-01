@@ -1,9 +1,19 @@
 $site-red: #e50b0b;
+$site-bg: #FAFFFF;
+$site-blue: #07276A;
+
+$font-righteous: 'Righteous', cursive;
+$font-varela: 'Varela Round', sans-serif;
 
 body {
+    font-family: $font-varela !important;
 
+    .app{
+        background-color: $site-bg;
+    }
+
+    // accordion
     .accordion {
-
         a,
         button {
             text-decoration: none !important;
@@ -42,7 +52,12 @@ body {
         }
     }
 
+    // navbar
     .navbar {
+        .navbar-brand{
+            color: $site-blue !important;
+        }
+
         a {
             padding-right: 5%;
         }
@@ -56,28 +71,25 @@ body {
         }
 
         .navbar-nav {
+            margin-left: 20%;
+
             .nav-link {
-                color: #ffffff !important;
+                color: #07276A !important;
                 font-size: 1.2rem;
                 margin-right: 10%;
             }
 
             .nav-link:hover {
-                border: 1px solid $site-red !important;
-                background-color: $site-red;
+                color: $site-red !important;
+            }
+
+            .nav-link:focus {
+                text-decoration: underline !important;
             }
         }
 
         form {
-            button {
-                color: #ffffff !important;
-                background-color: $site-red;
-            }
-
-            button:hover {
-                background-color: #343a40;
-                border-color: $site-red !important;
-            }
+            margin-left: 20%;
         }
     }
 

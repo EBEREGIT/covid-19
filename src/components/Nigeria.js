@@ -68,7 +68,6 @@ export default class Nigeria extends Component {
     } else {
       return (
         <main>
-          <Jumbotron>
             <h1 className="text-center">Nigeria Report</h1>
             <Container>
               <Row>
@@ -209,7 +208,6 @@ export default class Nigeria extends Component {
               </Row>
             </Container>
             <Footer />
-          </Jumbotron>
         </main>
       );
     }
