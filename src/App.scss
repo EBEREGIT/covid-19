@@ -1,15 +1,5 @@
 @import "./include-media.scss";
-
-$site-red: #e50b0b;
-$site-bg: #FAFFFF;
-$site-blue: #07276A;
-$site-blue-light: #0AA0BD;
-$site-menu: #07276A;
-
-$font-righteous: 'Righteous',
-cursive;
-$font-varela: 'Varela Round',
-sans-serif;
+@import "./SCSS/variables.scss";
 
 body {
     font-family: $font-varela !important;
@@ -60,89 +50,7 @@ body {
     }
 
     // navbar
-    .navbar {
-        background: $site-menu;
-
-        .navbar-brand {
-            color: $site-bg !important;
-            font-family: $font-righteous;
-        }
-
-        a {
-            margin-left: 2%;
-        }
-
-        a:hover {
-            color: $site-red !important;
-        }
-
-        a:focus {
-            text-decoration: underline;
-        }
-
-        .navbar-nav {
-            margin-left: 15%;
-
-            .nav-link {
-                color: $site-bg !important;
-                font-size: 1.2rem;
-                margin-right: 10%;
-            }
-
-            .nav-link:hover {
-                color: $site-red !important;
-            }
-
-            .nav-link:focus {
-                text-decoration: underline !important;
-            }
-        }
-
-        form {
-            margin-left: 15%;
-
-            input[type="text"]:focus {
-                box-shadow: 0 0 0 rgb(255, 255, 255);
-            }
-
-            input[type="checkbox"]:focus {
-                box-shadow: 0 0 0 rgb(255, 255, 255);
-            }
-
-            input {
-                border-radius: 50px 0 0 50px;
-                margin-right: 0;
-                background-color: $site-blue-light;
-                color: $site-bg !important;
-                border-color: $site-blue-light;
-            }
-
-            input::placeholder{
-                color: $site-bg;
-            }
-
-            input:focus {
-                background-color: $site-blue-light !important;
-                color: $site-bg !important;
-                border-color: $site-blue-light;
-            }
-
-            button {
-                border-radius: 0 50px 50px 50px;
-                margin-left: -15px;
-                z-index: 1;
-                background-color: $site-blue;
-                color: $site-bg;
-                cursor: pointer;
-                border-color: $site-blue-light;
-            }
-
-            button:hover {
-                background-color: $site-blue-light;
-                border-color: $site-blue !important;
-            }
-        }
-    }
+    @import "./SCSS/navbar.scss";
 
     .card {
         margin-top: 5%;
@@ -198,95 +106,9 @@ body {
         }
     }
 
-// phone
-    @include media('<=500px') {
-       .navbar{
-           
-           .navbar-brand{
-               color: $site-bg !important;
-           }
+    @import "./SCSS/phone.scss";
 
-           .navbar-toggler{
-               background: $site-bg;
-           }
+    @import "./SCSS/tab.scss";
 
-           form{
-               margin: 0;
-               margin-top: 5%;
-
-               input{
-                   width:90%
-               }
-
-               button{
-                   border-color: $site-blue-light;
-               }
-           }
-
-           .navbar-nav{
-               margin: 0;
-               margin-top: 5%;
-
-               .nav-link{
-                   text-align: center;
-                   color: $site-bg !important;
-               }
-           }
-       }
-    }
-
-    @include media('>500px', '<=991px') {
-       .navbar{
-
-           .navbar-brand{
-               color: $site-bg !important;
-           }
-
-           .navbar-toggler{
-               background: $site-bg;
-           }
-
-           form{
-               margin: 0;
-               margin-top: 3%;
-               display: flex;
-               justify-content: center;
-               
-               input{
-                   width:100%;
-               }
-
-               button{
-                   border-color: $site-blue-light;
-               }
-           }
-
-           .navbar-nav{
-               margin: 0;
-               margin-top: 3%;
-
-               .nav-link{
-                   text-align: center;
-                   color: $site-bg !important;
-               }
-           }
-       }
-    }
-
-    @include media('>991px', '<=1300px') {
-        .navbar{
-
-           form{
-               margin-left: 10%;
-           }
-
-           .navbar-nav{
-               margin-left: 10%;
-
-               .nav-link {
-                margin-right: 2%;
-            }
-           }
-       }
-    }
+    @import "./SCSS/desktop.scss";
 }

@@ -1,0 +1,83 @@
+.navbar {
+    background: $site-menu;
+
+    .navbar-brand {
+        color: $site-bg !important;
+        font-family: $font-righteous;
+    }
+
+    a {
+        margin-left: 2%;
+    }
+
+    a:hover {
+        color: $site-blue-light !important;
+    }
+
+    a:focus {
+        text-decoration: underline;
+    }
+
+    .navbar-nav {
+        margin-left: 15%;
+
+        .nav-link {
+            color: $site-bg !important;
+            font-size: 1.2rem;
+            margin-right: 10%;
+        }
+
+        .nav-link:hover {
+            color: $site-blue-light !important;
+        }
+
+        .nav-link:focus {
+            text-decoration: underline !important;
+        }
+    }
+
+    form {
+        margin-left: 15%;
+
+        input[type="text"]:focus {
+            box-shadow: 0 0 0 rgb(255, 255, 255);
+        }
+
+        input[type="checkbox"]:focus {
+            box-shadow: 0 0 0 rgb(255, 255, 255);
+        }
+
+        input {
+            border-radius: 50px 0 0 50px;
+            margin-right: 0;
+            background-color: $site-blue-light;
+            color: $site-bg !important;
+            border-color: $site-blue-light;
+        }
+
+        input::placeholder{
+            color: $site-bg;
+        }
+
+        input:focus {
+            background-color: $site-blue-light !important;
+            color: $site-bg !important;
+            border-color: $site-blue-light;
+        }
+
+        button {
+            border-radius: 0 50px 50px 50px;
+            margin-left: -15px;
+            z-index: 1;
+            background-color: $site-blue;
+            color: $site-bg;
+            cursor: pointer;
+            border-color: $site-blue-light;
+        }
+
+        button:hover {
+            background-color: $site-blue-light;
+            border-color: $site-blue !important;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@include media('>991px', '<=1300px') {
+    .navbar{
+
+       form{
+           margin-left: 10%;
+       }
+
+       .navbar-nav{
+           margin-left: 10%;
+
+           .nav-link {
+            margin-right: 2%;
+        }
+       }
+   }
+}

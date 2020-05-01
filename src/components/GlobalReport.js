@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Jumbotron, Table } from "react-bootstrap/";
+import { Table } from "react-bootstrap/";
 import NumberFormat from "react-number-format";
 import Moment from "react-moment";
 import Loading from "./Loading";

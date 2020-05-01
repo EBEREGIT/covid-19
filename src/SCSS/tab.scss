@@ -1,0 +1,37 @@
+@include media('>500px', '<=991px') {
+    .navbar{
+
+        .navbar-brand{
+            color: $site-bg !important;
+        }
+
+        .navbar-toggler{
+            background: $site-bg;
+        }
+
+        form{
+            margin: 0;
+            margin-top: 3%;
+            display: flex;
+            justify-content: center;
+            
+            input{
+                width:100%;
+            }
+
+            button{
+                border-color: $site-blue-light;
+            }
+        }
+
+        .navbar-nav{
+            margin: 0;
+            margin-top: 3%;
+
+            .nav-link{
+                text-align: center;
+                color: $site-bg !important;
+            }
+        }
+    }
+ }

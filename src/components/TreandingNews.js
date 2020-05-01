@@ -4,7 +4,6 @@ import {
   Container,
   Accordion,
   Card,
-  Jumbotron,
   Button,
   Tab,
   Tabs,

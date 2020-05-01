@@ -5,7 +5,6 @@ import {
   Col,
   Card,
   ListGroup,
-  Jumbotron,
 } from "react-bootstrap/";
 import NumberFormat from "react-number-format";
 import Loading from "./Loading";
