@@ -1,7 +1,10 @@
+@import "./include-media.scss";
+
 $site-red: #e50b0b;
 $site-bg: #FAFFFF;
 $site-blue: #07276A;
 $site-blue-light: #0AA0BD;
+$site-menu: #07276A;
 
 $font-righteous: 'Righteous',
 cursive;
@@ -58,8 +61,11 @@ body {
 
     // navbar
     .navbar {
+        background: $site-menu;
+
         .navbar-brand {
-            color: $site-blue !important;
+            color: $site-bg !important;
+            font-family: $font-righteous;
         }
 
         a {
@@ -78,7 +84,7 @@ body {
             margin-left: 15%;
 
             .nav-link {
-                color: #07276A !important;
+                color: $site-bg !important;
                 font-size: 1.2rem;
                 margin-right: 10%;
             }
@@ -108,6 +114,7 @@ body {
                 margin-right: 0;
                 background-color: $site-blue-light;
                 color: $site-bg !important;
+                border-color: $site-blue-light;
             }
 
             input::placeholder{
@@ -127,7 +134,7 @@ body {
                 background-color: $site-blue;
                 color: $site-bg;
                 cursor: pointer;
-                border-color: $site-blue;
+                border-color: $site-blue-light;
             }
 
             button:hover {
@@ -189,5 +196,97 @@ body {
                 padding-bottom: 5% !important;
             }
         }
+    }
+
+// phone
+    @include media('<=500px') {
+       .navbar{
+           
+           .navbar-brand{
+               color: $site-bg !important;
+           }
+
+           .navbar-toggler{
+               background: $site-bg;
+           }
+
+           form{
+               margin: 0;
+               margin-top: 5%;
+
+               input{
+                   width:90%
+               }
+
+               button{
+                   border-color: $site-blue-light;
+               }
+           }
+
+           .navbar-nav{
+               margin: 0;
+               margin-top: 5%;
+
+               .nav-link{
+                   text-align: center;
+                   color: $site-bg !important;
+               }
+           }
+       }
+    }
+
+    @include media('>500px', '<=991px') {
+       .navbar{
+
+           .navbar-brand{
+               color: $site-bg !important;
+           }
+
+           .navbar-toggler{
+               background: $site-bg;
+           }
+
+           form{
+               margin: 0;
+               margin-top: 3%;
+               display: flex;
+               justify-content: center;
+               
+               input{
+                   width:100%;
+               }
+
+               button{
+                   border-color: $site-blue-light;
+               }
+           }
+
+           .navbar-nav{
+               margin: 0;
+               margin-top: 3%;
+
+               .nav-link{
+                   text-align: center;
+                   color: $site-bg !important;
+               }
+           }
+       }
+    }
+
+    @include media('>991px', '<=1300px') {
+        .navbar{
+
+           form{
+               margin-left: 10%;
+           }
+
+           .navbar-nav{
+               margin-left: 10%;
+
+               .nav-link {
+                margin-right: 2%;
+            }
+           }
+       }
     }
 }
