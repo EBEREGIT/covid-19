@@ -1,19 +1,23 @@
 $site-red: #e50b0b;
 $site-bg: #FAFFFF;
 $site-blue: #07276A;
+$site-blue-light: #0AA0BD;
 
-$font-righteous: 'Righteous', cursive;
-$font-varela: 'Varela Round', sans-serif;
+$font-righteous: 'Righteous',
+cursive;
+$font-varela: 'Varela Round',
+sans-serif;
 
 body {
     font-family: $font-varela !important;
 
-    .app{
+    .app {
         background-color: $site-bg;
     }
 
     // accordion
     .accordion {
+
         a,
         button {
             text-decoration: none !important;
@@ -54,12 +58,12 @@ body {
 
     // navbar
     .navbar {
-        .navbar-brand{
+        .navbar-brand {
             color: $site-blue !important;
         }
 
         a {
-            padding-right: 5%;
+            margin-left: 2%;
         }
 
         a:hover {
@@ -71,7 +75,7 @@ body {
         }
 
         .navbar-nav {
-            margin-left: 20%;
+            margin-left: 15%;
 
             .nav-link {
                 color: #07276A !important;
@@ -89,7 +93,47 @@ body {
         }
 
         form {
-            margin-left: 20%;
+            margin-left: 15%;
+
+            input[type="text"]:focus {
+                box-shadow: 0 0 0 rgb(255, 255, 255);
+            }
+
+            input[type="checkbox"]:focus {
+                box-shadow: 0 0 0 rgb(255, 255, 255);
+            }
+
+            input {
+                border-radius: 50px 0 0 50px;
+                margin-right: 0;
+                background-color: $site-blue-light;
+                color: $site-bg !important;
+            }
+
+            input::placeholder{
+                color: $site-bg;
+            }
+
+            input:focus {
+                background-color: $site-blue-light !important;
+                color: $site-bg !important;
+                border-color: $site-blue-light;
+            }
+
+            button {
+                border-radius: 0 50px 50px 50px;
+                margin-left: -15px;
+                z-index: 1;
+                background-color: $site-blue;
+                color: $site-bg;
+                cursor: pointer;
+                border-color: $site-blue;
+            }
+
+            button:hover {
+                background-color: $site-blue-light;
+                border-color: $site-blue !important;
+            }
         }
     }
 

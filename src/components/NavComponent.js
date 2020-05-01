@@ -1,11 +1,5 @@
 import React, { Component, Fragment } from "react";
-import {
-  Nav,
-  Navbar,
-  Form,
-  FormControl,
-  InputGroup,
-} from "react-bootstrap/";
+import { Nav, Navbar, Form, FormControl, Button } from "react-bootstrap/";
 
 export default class NavComponent extends Component {
   constructor(props) {
@@ -44,22 +38,16 @@ export default class NavComponent extends Component {
               onSubmit={this.handleSubmit.bind(this)}
               action="/search"
             >
-              <Form.Group>
-                <InputGroup>
-                  {/* input */}
-                  <FormControl
-                    type="text"
-                    placeholder="Search a County"
-                    className="mr-sm-2"
-                    onChange={this.handleChange.bind(this)}
-                  />
-                  <InputGroup.Prepend onClick={this.handleSubmit.bind(this)}>
-                    <InputGroup.Text id="inputGroupPrepend">
-                    <i className="fa fa-search" aria-hidden="true"></i>
-                    </InputGroup.Text>
-                  </InputGroup.Prepend>
-                </InputGroup>
-              </Form.Group>
+              <FormControl
+                type="text"
+                placeholder="Search a County"
+                onChange={this.handleChange.bind(this)}
+              />
+              <Button
+                onClick={this.handleSubmit.bind(this)}
+              >
+               <i className="fa fa-search" aria-hidden="true"></i> 
+              </Button>
             </Form>
 
             {/* nav links */}
