@@ -10,6 +10,7 @@ import { capitalize } from "./components/Helper";
 import { Col, Card, ListGroup } from "react-bootstrap/";
 import NumberFormat from "react-number-format";
 import Moment from "react-moment";
+import LandingPage from "./components/LandingPage";
 
 export default class App extends Component {
   constructor(props) {
@@ -164,7 +165,7 @@ export default class App extends Component {
         )}
 
         <Switch>
-          <Route exact path="/" />
+          <Route exact path="/" component={LandingPage} />
           <Route path="/global" component={GlobalReport} />
           <Route path="/countries" component={CountriesReport} />
           <Route path="/trending" component={TreandingNews} />
