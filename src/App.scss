@@ -4,42 +4,13 @@
 body {
     font-family: $font-varela !important;
 
-    .landing-page {
-        .welcome {
-            padding-bottom: 20%;
-            // hero and call to actio
-            .hero {
-                margin-top: 15%;
+    // chart-container
+    @import "./SCSS/chart-container.scss";
 
-                h1 {
-                    color: $site-blue;
-                    font-family: $font-righteous;
-                    font-weight: bolder;
-                    margin-bottom: 0;
-                }
+    // landing-page
+    @import "./SCSS/landing-page.scss";
 
-                p {
-                    margin-top: 0;
-                }
-
-                button {
-                    margin-top: 3%;
-                    border-radius: 0 50px 50px 50px;
-                    color: $site-bg;
-                    background-color: $site-blue;
-                    width: 50%;
-                    font-size: 0.8rem;
-                    padding: 3%;
-                }
-            }
-
-            // map
-            @import "./SCSS/map.scss";
-        }
-
-    }
-
-
+    // app
     .app {
         background-color: $site-bg;
     }

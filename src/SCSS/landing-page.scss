@@ -1,0 +1,48 @@
+.landing-page {
+    .welcome {
+        padding-bottom: 10%;
+
+        // hero and call to action
+        .hero {
+            margin-top: 14%;
+
+            h1 {
+                color: $site-blue;
+                font-family: $font-righteous;
+                font-weight: bold;
+                margin-bottom: 0;
+                font-size: 3.5rem;
+            }
+
+            p {
+                margin-top: 0;
+                font-size: 1.2rem;
+                color: $site-blue;
+            }
+
+            button {
+                margin-top: 3%;
+                border-radius: 0 50px 50px 50px;
+                color: $site-bg;
+                background-color: $site-blue;
+                width: 50%;
+                font-size: 1rem;
+                padding: 3%;
+                font-weight: bold;
+            }
+        }
+
+        // map
+        @import "./map.scss";
+    }
+
+    // world report
+    .world-report{        
+        h2{
+            color: $site-blue;
+            padding-bottom: 5%;
+            font-weight: bolder;
+        }
+    }
+
+}

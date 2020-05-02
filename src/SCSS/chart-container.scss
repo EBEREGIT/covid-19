@@ -1,0 +1,14 @@
+.chart-container {
+    position: relative;
+    height: auto;
+    width: 100vh;
+    background-color: white;
+    padding: 5%;
+    border: 3px solid #f9f9f9;
+    margin-bottom: 5%;
+
+    h5{
+        color: $site-blue;
+        margin-bottom: 5%;
+    }
+}
