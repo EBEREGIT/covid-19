@@ -6,6 +6,7 @@ export default function TotalActiveCases() {
   // load the graph
   window.addEventListener("load", function () {
     var ctx = document.getElementById("total-active-cases");
+    // eslint-disable-next-line
     var myChart = new Chart(ctx, {
       type: "line",
       data: {
@@ -52,6 +53,7 @@ export default function TotalActiveCases() {
           <h5>Active Cases</h5>
         </Col>
 
+      {/* graph */}
       <canvas id="total-active-cases" width="100" height="100"></canvas>
     </Col>
   );

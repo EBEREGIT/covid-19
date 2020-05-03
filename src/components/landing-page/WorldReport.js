@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col, Table, Button } from "react-bootstrap/";
+import { Row, Col } from "react-bootstrap/";
 import TotalComfirmedCases from "./world-report/TotalComfirmedCases";
 import TotalActiveCases from "./world-report/TotalActiveCases";
 import TotalRecovery from "./world-report/TotalRecovery";

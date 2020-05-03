@@ -6,6 +6,7 @@ export default function TotalDeaths() {
   // load the graph
   window.addEventListener("load", function () {
     var ctx = document.getElementById("total-deaths");
+    // eslint-disable-next-line
     var myChart = new Chart(ctx, {
       type: "line",
       data: {
@@ -52,6 +53,7 @@ export default function TotalDeaths() {
           <h5>Total deaths</h5>
         </Col>
 
+      {/* graph */}
       <canvas id="total-deaths" width="100" height="100"></canvas>
     </Col>
   );

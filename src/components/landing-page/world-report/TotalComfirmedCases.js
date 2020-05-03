@@ -6,6 +6,7 @@ export default function TotalComfirmedCases() {
   // load the graph
   window.addEventListener("load", function () {
     var ctx = document.getElementById("total-comfirmed-cases");
+    // eslint-disable-next-line
     var myChart = new Chart(ctx, {
       type: "line",
       data: {
@@ -52,6 +53,7 @@ export default function TotalComfirmedCases() {
           <h5>Total Cases</h5>
         </Col>
 
+        {/* graph */}
       <canvas id="total-comfirmed-cases" width="100" height="100"></canvas>
     </Col>
   );

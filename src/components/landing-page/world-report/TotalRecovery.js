@@ -6,6 +6,7 @@ export default function TotalRecovery() {
   // load the graph
   window.addEventListener("load", function () {
     var ctx = document.getElementById("total-recovery");
+    // eslint-disable-next-line
     var myChart = new Chart(ctx, {
       type: "line",
       data: {
@@ -52,6 +53,7 @@ export default function TotalRecovery() {
           <h5>Total Recovery</h5>
         </Col>
 
+      {/* graph */}
       <canvas id="total-recovery" width="100" height="100"></canvas>
     </Col>
   );
