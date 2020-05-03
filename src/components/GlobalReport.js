@@ -7,7 +7,7 @@ import Footer from "./Footer";
 
 export default class GlobalReport extends Component {
   constructor(props) {
-    super(props);
+    super(props); 
     this.state = {
       report: [],
       isLoaded: false,
