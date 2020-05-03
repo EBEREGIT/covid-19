@@ -142,6 +142,7 @@
     }
 
     .countries-report {
+        margin-bottom: 7%;
         form {
             margin-left: 18%;
             display: flex;
@@ -153,6 +154,10 @@
                 background-color: transparent;
                 color: $site-blue !important;
                 border-color: $site-blue;
+            }
+
+            select:focus{
+                background-color: white;
             }
 
             button {
@@ -192,7 +197,7 @@
 
             th,
             td {
-                border: 1px solid #ddd;
+                border: 1px solid $site-gray;
                 padding: 2%;
             }
 
@@ -204,8 +209,8 @@
                 background-color: white;
             }
 
-            tr:hover {
-                background-color: #ddd;
+            td:hover {
+                border: 1px solid $site-blue;
             }
         }
     }
