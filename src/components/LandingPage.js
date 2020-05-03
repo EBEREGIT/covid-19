@@ -1,7 +1,8 @@
 import React from "react";
-import { Container, Row, Col, Table, Button } from "react-bootstrap/";
+import { Container } from "react-bootstrap/";
 import Hero from "./landing-page/Hero";
 import WorldReport from "./landing-page/WorldReport";
+import CountriesReport from "./landing-page/CountriesReport";
 
 
 export default function LandingPage() {
@@ -14,6 +15,7 @@ export default function LandingPage() {
       <WorldReport/>
 
       {/* Countries Report */}
+      <CountriesReport/>
       
     </Container>
   );

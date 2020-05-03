@@ -42,101 +42,174 @@
         @import "./map.scss";
     }
 
-    // world report
-    .world-report {
-        h2 {
-            color: $site-blue;
-            padding-bottom: 5%;
-            font-weight: bolder;
-        }
+    h2 {
+        color: $site-blue;
+        padding-bottom: 5%;
+        font-weight: bolder;
     }
 
-    .total-report {
-        padding: 2% !important;
+    // world report
+    .world-report {
+        margin-bottom: 7%;
 
-        h3 {
-            color: $site-blue-lighter;
-            font-family: $font-righteous;
-            padding-top: 3%;
-            padding-bottom: 3%;
-        }
+        .total-report {
+            padding: 2% !important;
 
-        h5 {
-            margin-bottom: 2%;
-            font-weight: bold;
-        }
+            h3 {
+                color: $site-blue-lighter;
+                font-family: $font-righteous;
+                padding-top: 3%;
+                padding-bottom: 3%;
+            }
 
-        p {
-            font-size: 0.9rem;
-        }
+            h5 {
+                margin-bottom: 2%;
+                font-weight: bold;
+            }
 
-        table,
-        tr,
-        td {
-            border: none;
+            p {
+                font-size: 0.9rem;
+            }
 
-            tbody {
-                tr {
-                    td {
-                        list-style-type: disc;
-                        list-style: none;
+            table,
+            tr,
+            td {
+                border: none;
 
-                        li {
-                            margin-top: -2.5%;
+                tbody {
+                    tr {
+                        td {
+                            list-style-type: disc;
+                            list-style: none;
+
+                            li {
+                                margin-top: -2.5%;
+                            }
+
+                            li::before {
+                                content: "\2022";
+                                margin-right: 10%;
+                                font-weight: bolder;
+                                font-size: 1.2rem;
+                            }
                         }
 
-                        li::before {
-                            content: "\2022";
-                            margin-right: 10%;
-                            font-weight: bolder;
-                            font-size: 1.2rem;
+                        #active-cases {
+                            li::before {
+                                color: $site-orange;
+                            }
                         }
-                    }
 
-                    #active-cases {
-                        li::before {
-                            color: $site-orange;
+                        #recovered {
+                            li::before {
+                                color: $site-green;
+                            }
                         }
-                    }
 
-                    #recovered {
-                        li::before {
-                            color: $site-green;
-                        }
-                    }
-
-                    #deaths {
-                        li::before {
-                            color: $site-red-dark;
+                        #deaths {
+                            li::before {
+                                color: $site-red-dark;
+                            }
                         }
                     }
                 }
             }
+
+            #btn-see-all {
+                display: flex;
+                justify-content: center;
+
+                button {
+                    margin-top: 3%;
+                    border-radius: 0 50px 50px 50px;
+                    color: $site-blue;
+                    background-color: transparent;
+                    width: 60%;
+                    font-size: 1rem;
+                    padding: 3%;
+                    border-color: $site-blue;
+                }
+
+                button:hover {
+                    color: $site-bg;
+                    background-color: $site-blue;
+                }
+
+
+            }
+
         }
+    }
 
-        #btn-see-all {
+    .countries-report {
+        form {
+            margin-left: 18%;
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
 
-            button {
-                margin-top: 3%;
-                border-radius: 0 50px 50px 50px;
-                color: $site-blue;
+            select {
+                border-radius: 50px 0 0 50px;
+                margin-right: 0;
                 background-color: transparent;
-                width: 60%;
-                font-size: 1rem;
-                padding: 3%;
+                color: $site-blue !important;
                 border-color: $site-blue;
             }
 
-            button:hover {
-                color: $site-bg;
+            button {
+                border-radius: 0 50px 50px 50px;
+                margin-left: -15px;
+                z-index: 1;
                 background-color: $site-blue;
+                color: $site-bg;
+                cursor: pointer;
+                border-color: $site-blue-light;
             }
 
-
+            button:hover {
+                background-color: $site-blue-light;
+                border-color: $site-blue !important;
+            }
         }
 
+        table {
+            margin-top: 10%;
+            border-collapse: collapse;
+            width: 100%;
+
+            th {
+                background-color: $site-blue;
+                color: white;
+
+                span{
+                    text-align: center;
+                    margin-left: 35%;
+                }
+              }
+
+            td{
+                text-align: center;
+            }
+
+            th,
+            td {
+                border: 1px solid #ddd;
+                padding: 2%;
+            }
+
+            tr:nth-child(odd) {
+                background-color: $site-gray;
+            }
+
+            tr:nth-child(even) {
+                background-color: white;
+            }
+
+            tr:hover {
+                background-color: #ddd;
+            }
+        }
     }
+
+
 
 }

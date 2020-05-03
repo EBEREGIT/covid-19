@@ -50,17 +50,16 @@
         input {
             border-radius: 50px 0 0 50px;
             margin-right: 0;
-            background-color: $site-blue-light;
-            color: $site-bg !important;
+            background-color: $site-bg;
+            color: $site-blue !important;
             border-color: $site-blue-light;
         }
 
         input::placeholder{
-            color: $site-bg;
+            color: $site-blue;
         }
 
         input:focus {
-            background-color: $site-blue-light !important;
             color: $site-bg !important;
             border-color: $site-blue-light;
         }
