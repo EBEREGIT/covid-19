@@ -1,0 +1,70 @@
+@include media('>766px', '<=991px') {
+    .chart-container {
+        padding: 1%;
+    
+        h5{
+            color: $site-blue;
+            margin-bottom: 5%;
+            font-size: 1rem;
+        }
+    }
+
+    .landing-page {
+        .hero {
+            margin-top: 18% !important;
+            text-align: left;
+
+            button {
+                font-size: 0.8rem !important;
+                width: 60%;
+            }
+        }
+
+        .mapdiv {
+            margin-top: 25% !important;
+        }
+
+        .world-report {
+            .total-report {
+                p{
+                    font-size: 0.7rem;
+                }
+
+                table{
+                    tr{
+                        td{
+                            font-size: 0.7rem;
+
+                            li{
+                                margin-top: -10% !important;
+                            }
+                        }
+                    }
+                }
+                #btn-see-all {
+    
+                    button {
+                        width: 60%;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+
+        .countries-report {
+            form{
+                display: flex;
+                justify-content: center;
+                margin-left: 0;
+
+                select{
+                    width: 70%;
+                }
+            }
+        }
+
+        p{
+            font-size: 0.7rem;
+        }
+    }
+}

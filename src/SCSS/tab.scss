@@ -34,4 +34,65 @@
             }
         }
     }
+
+    .landing-page {
+        .hero {
+            margin-top: 30% !important;
+            text-align: center;
+            z-index: 1 !important;
+
+            h1 {
+                font-size: 2.5rem !important;
+                font-weight: normal !important;
+            }
+
+            button {
+                font-weight: normal;
+                font-size: 0.7rem !important;
+            }
+
+            button:hover{
+                background-color: $site-map !important;
+            }
+        }
+
+        .mapdiv {
+            margin-top: -40% !important;
+            margin-bottom: 10%;
+        }
+
+        h2 {
+            padding-bottom: 5%;
+            font-weight: normal;
+            font-size: 1.8rem;
+        }
+
+        .world-report {
+            .total-report {
+                #btn-see-all {
+    
+                    button {
+                        width: 40%;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+
+        .countries-report {
+            form{
+                display: flex;
+                justify-content: center;
+                margin-left: 0;
+
+                select{
+                    width: 70%;
+                }
+            }
+        }
+
+        p{
+            font-size: 0.7rem;
+        }
+    }
  }
