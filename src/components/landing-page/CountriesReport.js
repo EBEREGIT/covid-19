@@ -32,6 +32,7 @@ export default class CountriesReport extends Component {
     let { reports, isLoaded } = this.state;
     let counter = 1;
 
+    // show loading while data is being fetched
     if (!isLoaded) {
       return (
         <div className="text-center">
@@ -39,8 +40,9 @@ export default class CountriesReport extends Component {
         </div>
       );
     } else {
+      // data from API
       return (
-        <Row className="countries-report">
+        <Row className="countries-report" id="countries-section">
           <Col xs={12} sm={12} md={12} lg={12}>
             <h2 className="text-center">Countries Report</h2>
           </Col>

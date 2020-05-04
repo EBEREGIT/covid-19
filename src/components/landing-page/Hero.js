@@ -16,6 +16,7 @@ export default function Hero() {
       {/* map image or background */}
       <Col xs={12} sm={12} md={7} lg={7}>
         <Map />
+        <div id="world-section"></div>
       </Col>
     </Row>
   );
