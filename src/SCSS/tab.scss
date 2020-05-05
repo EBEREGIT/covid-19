@@ -121,7 +121,7 @@
         }
 
         .mapdiv {
-            margin-top: -70% !important;
+            margin-top: -50% !important;
         }
     }
 
@@ -129,4 +129,12 @@
         margin-top: -40%;
     }
 
+}
+
+@include media('>=420px', '<=670px') {
+    .trending-news {
+        .mapdiv {
+            margin-top: -70% !important;
+        }
+    }
 }
