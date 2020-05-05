@@ -54,7 +54,7 @@ export default class NavComponent extends Component {
             <Nav className="mr-auto">
               <Nav.Link href="/#world-section">World</Nav.Link>
               <Nav.Link href="/#countries-section">Countries</Nav.Link>
-              <Nav.Link href="/trending">Trending</Nav.Link>
+              <Nav.Link href="/news">Trending</Nav.Link>
               <Nav.Link href="/nigeria">Nigeria</Nav.Link>
             </Nav>
             

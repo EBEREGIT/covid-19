@@ -20,3 +20,36 @@
     @import "./map.scss";
 
 }
+
+.all-news{
+    margin-top: -15%;
+    margin-bottom: 10%;
+    .card{
+        img{
+            width: 100%;
+            height: 200px;
+        }
+
+        .card-title{
+            line-height: 160%;
+            margin-bottom: 10%;
+        }
+
+        .card-subtitle{
+            font-size: 0.9rem !important;
+        }
+
+        .author{
+            margin-top: 7%;
+            margin-bottom: 15% !important;
+
+            span{
+                color: $site-blue-lighter;
+            }
+        }
+
+        a{
+            color: $site-blue-lighter;
+        }
+    }
+}
