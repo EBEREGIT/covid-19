@@ -42,7 +42,7 @@ export default class AllNews extends Component {
       return (
         <Row className="all-news">
           {newsReports[1].map((report) => (
-            <Col xs={12} sm={12} md={4} lg={4}>
+            <Col xs={12} sm={12} md={6} lg={4}>
               <Card style={{ width: "100%" }}>
                 <Card.Img variant="top" src={report.urlToImage} />
                 <Card.Body>
@@ -57,7 +57,7 @@ export default class AllNews extends Component {
                   
                   {/* author */}
                   <Card.Subtitle className="mb-2 text-muted author">
-                    Authored By: {" "}
+                    Author: {" "}
                     <span>
                       {report.author
                         ? report.author

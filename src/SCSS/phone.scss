@@ -94,4 +94,99 @@
             font-size: 0.7rem;
         }
     }
+
+    .trending-news {
+
+        .news {
+            h1 {
+                margin-top: 18%;
+            }
+        }
+
+        .mapdiv {
+            margin-top: -50% !important;
+        }
+    }
+
+    .all-news{
+        margin-top: -2%;
+    }
+}
+
+@include media('<=490px') {
+    .trending-news {
+
+        .news {
+            h1 {
+                font-weight: lighter;
+            }
+        }
+    }
+
+    .all-news{
+        margin-top: -25%;
+    }
+
+}
+
+@include media('<=430px') {
+    .trending-news {
+
+        .news {
+            h1 {
+                margin-top: 18%;
+                font-weight: lighter;
+            }
+        }
+
+        .mapdiv {
+            margin-top: -60% !important;
+        }
+    }
+
+    .all-news{
+        margin-top: -35%;
+    }
+
+}
+
+@include media('<=360px') {
+    .trending-news {
+
+        .news {
+            h1 {
+                font-weight: lighter;
+            }
+        }
+
+        .mapdiv {
+            margin-top: -75% !important;
+        }
+    }
+
+    .all-news{
+        margin-top: -40%;
+    }
+
+}
+
+@include media('<=305px') {
+    .trending-news {
+
+        .news {
+            h1 {
+                margin-top: 18%;
+                font-weight: lighter;
+            }
+        }
+
+        .mapdiv {
+            margin-top: -85% !important;
+        }
+    }
+
+    .all-news{
+        margin-top: -40%;
+    }
+
 }

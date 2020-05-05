@@ -95,4 +95,38 @@
             font-size: 0.7rem;
         }
     }
+
+    .trending-news {
+
+        .news {
+            h1 {
+                margin-top: 17%;
+            }
+        }
+
+        .mapdiv {
+            margin-top: -34% !important;
+        }
+    }
  }
+
+ @include media('>=520px', '<=750px') {
+    .trending-news {
+
+        .news {
+            h1 {
+                margin-top: 20%;
+                font-weight: lighter;
+            }
+        }
+
+        .mapdiv {
+            margin-top: -50% !important;
+        }
+    }
+
+    .all-news{
+        margin-top: -20%;
+    }
+
+}
