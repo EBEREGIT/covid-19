@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import NumberFormat from "react-number-format";
 import { Row, Col, Table, Button } from "react-bootstrap/";
 import Loading from "../../Loading";

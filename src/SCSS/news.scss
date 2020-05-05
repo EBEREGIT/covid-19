@@ -1,0 +1,22 @@
+.trending-news{
+    text-align: center !important;
+
+    .news{
+        color: $site-blue;
+        font-family: $font-righteous;
+        z-index: 1 !important;
+
+        h1{
+            font-size: 4rem !important;
+            margin-top: 20%;
+            font-weight: bolder;
+        }
+    }
+
+    .mapdiv {
+        margin-top: -28% !important;
+    }
+
+    @import "./map.scss";
+
+}
