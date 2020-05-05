@@ -101,16 +101,21 @@
         .news {
             h1 {
                 margin-top: 17%;
+                font-weight: lighter;
             }
         }
 
         .mapdiv {
-            margin-top: -34% !important;
+            margin-top: -80% !important;
         }
+    }
+
+    .all-news{
+        margin-top: -40%;
     }
  }
 
- @include media('>=420px', '<=760px') {
+ @include media('>=360px', '<=800px') {
     .trending-news {
 
         .news {
@@ -126,15 +131,15 @@
     }
 
     .all-news{
-        margin-top: -40%;
+        margin-top: -20%;
     }
 
 }
 
-@include media('>=420px', '<=670px') {
-    .trending-news {
-        .mapdiv {
-            margin-top: -70% !important;
-        }
-    }
-}
+// @include media('>=420px', '<=670px') {
+//     .trending-news {
+//         .mapdiv {
+//             margin-top: -70% !important;
+//         }
+//     }
+// }
