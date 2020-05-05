@@ -1,4 +1,4 @@
-@include media('>500px', '<=991px') {
+@include media('>phone', '<=tablet') {
     .navbar{
 
         .navbar-brand{

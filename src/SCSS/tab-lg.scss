@@ -1,4 +1,4 @@
-@include media('>766px', '<=991px') {
+@include media('>tablet', '<=desktop') {
     .chart-container {
         padding: 1%;
     
@@ -66,5 +66,23 @@
         p{
             font-size: 0.7rem;
         }
+    }
+
+    .trending-news {
+
+        .news {
+            h1 {
+                margin-top: 23%;
+                font-weight: lighter;
+            }
+        }
+
+        .mapdiv {
+            margin-top: -50% !important;
+        }
+    }
+
+    .all-news{
+        margin-top: -25%;
     }
 }
