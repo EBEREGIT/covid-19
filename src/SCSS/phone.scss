@@ -113,3 +113,23 @@
         margin-top: -35%;
     }
 }
+
+@include media('<300px'){
+    .trending-news {
+
+        .news {
+            h1 {
+                margin-top: 20%;
+                font-weight: normal !important;
+            }
+        }
+
+        .mapdiv {
+            margin-top: -100% !important;
+        }
+    }
+
+    .all-news{
+        margin-top: -65%;
+    }
+}
