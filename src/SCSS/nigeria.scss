@@ -1,0 +1,45 @@
+.nigeria{
+    h2{
+        padding-top: 5%;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        color: $site-blue;
+    }
+    table {
+        margin-top: 10%;
+        border-collapse: collapse;
+        width: 100%;
+
+        th {
+            background-color: $site-blue;
+            color: white;
+
+            span{
+                text-align: center;
+                margin-left: 35%;
+            }
+          }
+
+        td{
+            text-align: center;
+        }
+
+        th,
+        td {
+            border: 1px solid $site-gray;
+            padding: 2%;
+        }
+
+        tr:nth-child(odd) {
+            background-color: $site-gray;
+        }
+
+        tr:nth-child(even) {
+            background-color: white;
+        }
+
+        td:hover {
+            border: 1px solid $site-blue;
+        }
+    }
+}

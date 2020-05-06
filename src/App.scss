@@ -7,6 +7,9 @@ html{
 
 body {
     font-family: $font-varela !important;
+
+    // nigeria
+    @import "./SCSS/nigeria.scss";
     
     // news
     @import "./SCSS/news.scss";
