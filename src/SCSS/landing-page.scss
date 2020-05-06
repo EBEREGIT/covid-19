@@ -1,6 +1,6 @@
 .landing-page {
     .welcome {
-        padding-bottom: 10%;
+        padding-bottom: 0;
 
         // hero and call to action
         .hero {
@@ -36,6 +36,10 @@
                 color: $site-blue;
                 background-color: transparent;
             }
+        }
+
+        .mapdiv {
+            margin-top: -10% !important;
         }
 
         // map

@@ -14,6 +14,24 @@
         }
     }
 
+    .landing-page {
+        .mapdiv {
+            margin-top: 0 !important;
+            margin-bottom: 10%;
+        }
+
+        .world-report {
+            margin-top: -15% !important;
+            .total-report {
+                #btn-see-all {
+                    button {
+                        width: 60%;
+                    }
+                }
+            }
+        }
+    }
+
     .trending-news {
 
         .news {

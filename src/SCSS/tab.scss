@@ -37,7 +37,7 @@
 
     .landing-page {
         .hero {
-            margin-top: 30% !important;
+            margin-top: 20% !important;
             text-align: center;
             z-index: 1 !important;
 
@@ -57,7 +57,7 @@
         }
 
         .mapdiv {
-            margin-top: -40% !important;
+            margin-top: -55% !important;
             margin-bottom: 10%;
         }
 
@@ -68,6 +68,7 @@
         }
 
         .world-report {
+            margin-top: -30% !important;
             .total-report {
                 #btn-see-all {
     
@@ -100,46 +101,17 @@
 
         .news {
             h1 {
-                margin-top: 17%;
+                margin-top: 20%;
                 font-weight: lighter;
             }
         }
 
         .mapdiv {
-            margin-top: -80% !important;
-        }
-    }
-
-    .all-news{
-        margin-top: -40%;
-    }
- }
-
- @include media('>=360px', '<=800px') {
-    .trending-news {
-
-        .news {
-            h1 {
-                margin-top: 20%;
-                font-weight: lighter !important;
-            }
-        }
-
-        .mapdiv {
-            margin-top: -50% !important;
+            margin-top: -45% !important;
         }
     }
 
     .all-news{
         margin-top: -20%;
     }
-
-}
-
-// @include media('>=420px', '<=670px') {
-//     .trending-news {
-//         .mapdiv {
-//             margin-top: -70% !important;
-//         }
-//     }
-// }
+ }
