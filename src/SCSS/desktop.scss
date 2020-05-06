@@ -33,7 +33,11 @@
     }
 
     .trending-news {
-
+        background-image: url("../world.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            padding-bottom: 30%;
         .news {
             h1 {
                 margin-top: 15%;
@@ -42,7 +46,7 @@
         }
 
         .mapdiv {
-            margin-top: -24% !important;
+            display: none;
         }
     }
 
