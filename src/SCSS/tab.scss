@@ -1,4 +1,4 @@
-@include media('>phone', '<=tablet') {
+@include media('>500px', '<=tablet') {
     .navbar{
 
         .navbar-brand{
@@ -37,7 +37,7 @@
 
     .landing-page {
         .welcome{
-            margin-top: -30% !important;
+            margin-top: -10% !important;
             .hero {
                 margin-bottom: -100% !important;
                 text-align: center;
@@ -47,7 +47,7 @@
                 h1 {
                     font-size: 2.5rem !important;
                     font-weight: normal !important;
-                    margin-top: 45% !important;
+                    margin-top: 25% !important;
                 }
 
                 button {
@@ -72,7 +72,7 @@
         }
 
         .world-report {
-            margin-top: -30% !important;
+            margin-top: -25% !important;
             .total-report {
                 #btn-see-all {
     
@@ -111,11 +111,11 @@
         }
 
         .mapdiv {
-            margin-top: -45% !important;
+            margin-top: -65% !important;
         }
     }
 
     .all-news{
-        margin-top: -20%;
+        margin-top: -35%;
     }
  }

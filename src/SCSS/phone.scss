@@ -1,4 +1,4 @@
-@include media('<=phone') {
+@include media('<=500px') {
 
     .navbar {
 
@@ -35,29 +35,28 @@
     }
 
     .landing-page {
-        .hero {
-            margin-top: 20% !important;
-            text-align: center;
-            z-index: 1 !important;
+        .welcome{
+            margin-top: -15% !important;
+            .hero {
+                margin-top: 30% !important;
+                margin-bottom: -100%;
+                text-align: center;
+                z-index: 1 !important;
 
-            h1 {
-                font-size: 2rem !important;
-                font-weight: normal !important;
+                h1 {
+                    font-size: 2rem !important;
+                    font-weight: normal !important;
+                }
+
+                button {
+                    font-weight: normal;
+                    font-size: 0.7rem !important;
+                }
+
+                button:hover{
+                    background-color: $site-map !important;
+                }
             }
-
-            button {
-                font-weight: normal;
-                font-size: 0.7rem !important;
-            }
-
-            button:hover{
-                background-color: $site-map !important;
-            }
-        }
-
-        .mapdiv {
-            margin-top: -105% !important;
-            margin-bottom: 15%;
         }
 
         h2 {
@@ -67,7 +66,7 @@
         }
 
         .world-report {
-            margin-top: -60% !important;
+            margin-top: -30% !important;
             .total-report {
                 #btn-see-all {
     
