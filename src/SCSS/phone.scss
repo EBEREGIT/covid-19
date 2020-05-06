@@ -36,14 +36,16 @@
 
     .landing-page {
         .welcome{
-            margin-top: -30% !important;
+            background-image: url("../world.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            padding-bottom: 25%;
             .hero {
-                margin-top: 50% !important;
-                margin-bottom: -100%;
                 text-align: center;
                 z-index: 1 !important;
 
                 h1 {
+                    margin-top: 10% !important;
                     font-size: 2rem !important;
                     font-weight: normal !important;
                 }
@@ -57,6 +59,10 @@
                     background-color: $site-map !important;
                 }
             }
+
+            .mapdiv{
+                display: none;
+            }
         }
 
         h2 {
@@ -66,7 +72,7 @@
         }
 
         .world-report {
-            margin-top: -40% !important;
+            margin-top: 0% !important;
             .total-report {
                 #btn-see-all {
     
@@ -96,20 +102,25 @@
     }
 
     .trending-news {
+        background-image: url("../world.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            padding-top: 65%;
 
         .news {
             h1 {
-                margin-top: 15%;
+                margin-top: -50%;
                 font-weight: normal !important;
             }
         }
 
         .mapdiv {
-            margin-top: -100% !important;
+            display: none;
         }
     }
 
     .all-news{
-        margin-top: -50%;
+        margin-top: -5;
     }
 }
