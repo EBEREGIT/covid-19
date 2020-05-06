@@ -36,29 +36,33 @@
     }
 
     .landing-page {
-        .hero {
-            margin-top: 20% !important;
-            text-align: center;
-            z-index: 1 !important;
+        .welcome{
+            margin-top: -20% !important;
+            .hero {
+                margin-bottom: -100% !important;
+                text-align: center;
+                z-index: 1 !important;
+                margin-top: 0 !important;
 
-            h1 {
-                font-size: 2.5rem !important;
-                font-weight: normal !important;
+                h1 {
+                    font-size: 2.5rem !important;
+                    font-weight: normal !important;
+                    margin-top: 35% !important;
+                }
+
+                button {
+                    font-weight: normal;
+                    font-size: 0.7rem !important;
+                }
+
+                button:hover{
+                    background-color: $site-map !important;
+                }
             }
 
-            button {
-                font-weight: normal;
-                font-size: 0.7rem !important;
-            }
-
-            button:hover{
-                background-color: $site-map !important;
-            }
-        }
-
-        .mapdiv {
-            margin-top: -55% !important;
-            margin-bottom: 10%;
+            // .mapdiv {
+            //     padding-top: -30% !important;
+            // }
         }
 
         h2 {

@@ -1,4 +1,18 @@
 @include media('>tablet', '<=desktop') {
+    .navbar {
+        form {
+            margin-left: 6%;
+        }
+
+        .navbar-nav {
+            margin-left: 6%;
+
+            .nav-link {
+                margin-right: 2%;
+            }
+        }
+    }
+    
     .chart-container {
         padding: 1%;
     
@@ -10,21 +24,17 @@
     }
 
     .landing-page {
-        .hero {
-            margin-top: 18% !important;
-            text-align: left;
-
-            button {
-                font-size: 0.8rem !important;
-                width: 60%;
+        .welcome{
+            margin-top: -5%;
+            .hero{
+                h1{
+                    margin-top: 12%;
+                }
             }
         }
 
-        .mapdiv {
-            margin-top: 25% !important;
-        }
-
         .world-report {
+            margin-top: -8% !important;
             .total-report {
                 p{
                     font-size: 0.7rem;

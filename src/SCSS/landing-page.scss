@@ -4,7 +4,7 @@
 
         // hero and call to action
         .hero {
-            margin-top: 14%;
+            margin-top: 10%;
 
             h1 {
                 color: $site-blue;
@@ -39,7 +39,7 @@
         }
 
         .mapdiv {
-            margin-top: -10% !important;
+            margin-top: -15% !important;
         }
 
         // map
@@ -55,6 +55,7 @@
     // world report
     .world-report {
         margin-bottom: 7%;
+        margin-top: -5% !important;
 
         .total-report {
             padding: 2% !important;
