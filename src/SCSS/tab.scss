@@ -1,4 +1,4 @@
-@include media('>500px', '<=tablet') {
+@include media('>phone', '<=tablet') {
     .navbar{
 
         .navbar-brand{
@@ -42,7 +42,7 @@
             background-position: center;
             background-size: cover;
             padding-bottom: 20%;
-            margin-top: 35%;
+            margin-top: 10%;
             .hero {
                 text-align: center;
                 z-index: 1 !important;
