@@ -213,10 +213,12 @@
             tr:nth-child(even) {
                 background-color: white;
             }
+        }
 
-            td:hover {
-                border: 1px solid $site-blue;
-            }
+        table:hover{
+            border-collapse: initial;
+            border: 1px solid $site-blue !important;
+            padding: 0;
         }
     }
 

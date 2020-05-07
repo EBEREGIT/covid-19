@@ -7,7 +7,7 @@ export default function Hero() {
     <Row className="welcome">
       {/* hero and call to action */}
       <Col xs={12} sm={12} md={12} lg={5} className="hero">
-        <h1>Corono Virus</h1>
+        <h1>Corona Virus</h1>
         <p>Tracker</p>
 
         <Button>View Statistics</Button>
