@@ -65,8 +65,8 @@ export default class CountriesReport extends Component {
           </Col>
 
           {reports.map((report) => (
-            <Col xs={12} sm={12} md={4} lg={4}>
-              <table id="each-countries">
+            <Col xs={12} sm={12} md={4} lg={4} className="each-country">
+              <table>
                 <tr>
                   <th>
                     00{counter++}

@@ -148,6 +148,7 @@
 
     .countries-report {
         margin-bottom: 7%;
+
         form {
             margin-left: 18%;
             display: flex;
@@ -161,7 +162,7 @@
                 border-color: $site-blue;
             }
 
-            select:focus{
+            select:focus {
                 background-color: white;
             }
 
@@ -181,45 +182,46 @@
             }
         }
 
-        table {
-            margin-top: 10%;
-            border-collapse: collapse;
-            width: 100%;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.11);
+        .each-country {
 
-            th {
-                background-color: $site-blue;
-                color: white;
+            table {
+                margin-top: 10%;
+                border-collapse: collapse;
+                width: 100%;
+                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.11);
 
-                span{
-                    text-align: center;
-                    margin-left: 30%;
+                &:hover{
+                    margin: 0;
                 }
-              }
 
-            td{
-                text-align: center;
+                th {
+                    background-color: $site-blue;
+                    color: white;
+
+                    span {
+                        text-align: center;
+                        margin-left: 30%;
+                    }
+                }
+
+                td {
+                    text-align: center;
+                }
+
+                th,
+                td {
+                    border: 1px solid $site-gray;
+                    padding: 2%;
+                }
+
+                tr:nth-child(odd) {
+                    background-color: $site-gray;
+                }
+
+                tr:nth-child(even) {
+                    background-color: white;
+                }
             }
-
-            th,
-            td {
-                border: 1px solid $site-gray;
-                padding: 2%;
-            }
-
-            tr:nth-child(odd) {
-                background-color: $site-gray;
-            }
-
-            tr:nth-child(even) {
-                background-color: white;
-            }
-        }
-
-        table:hover{
-            border-collapse: initial;
-            border: 1px solid $site-blue !important;
-            padding: 0;
         }
     }
 
