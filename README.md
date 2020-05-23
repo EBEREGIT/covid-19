@@ -10,6 +10,7 @@ In view of the on going pandemic, this app is being designed to create awareness
 * [coronatracker](https://api.coronatracker.com/)
 * [Logomakr](https://logomakr.com/)
 * [Nigeria API Documenter](https://documenter.getpostman.com/view/9215231/Szf549gB?version=latest)
+* [React Helmet](https://www.npmjs.com/package/react-helmet)
 
 ## Hosted 
 * https://covid19-stat.netlify.com/
