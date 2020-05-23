@@ -15,12 +15,15 @@ import Moment from "react-moment";
 export default class TreandingNews extends Component {
   constructor(props) {
     super(props);
+
+    // initial state
     this.state = {
       isLoaded: false,
       reports: [],
     };
   }
 
+  // API call
   componentDidMount() {
     fetch("https://api.coronatracker.com/news/trending")
       .then((res) => res.json())
@@ -41,13 +44,16 @@ export default class TreandingNews extends Component {
     let { reports, isLoaded } = this.state;
     let newsReports = Object.values(reports);
 
+    // show loading while data is being fetched
     if (!isLoaded) {
       return (
         <div className="text-center">
-          <Loading />
+          <Loading name="Trending News" />
         </div>
       );
     } else {
+
+      // data from API displayed after fetch is complete
       return (
         <Fragment>
           <h1 className="text-center">Trending News</h1>

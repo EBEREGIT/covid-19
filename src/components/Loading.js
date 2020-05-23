@@ -12,7 +12,7 @@ export default function Loading(props) {
           role="status"
           aria-hidden="true"
         />
-        Please Stay Safe. {props.name} Statistics Coming Up...
+        Please Stay Safe. {props.name} Report Coming Up...
       </Button>
     </Fragment>
   );

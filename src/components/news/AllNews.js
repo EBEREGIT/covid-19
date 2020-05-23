@@ -2,16 +2,20 @@ import React, { Component } from "react";
 import { Row, Col, Card } from "react-bootstrap/";
 import Loading from "../Loading";
 import Moment from "react-moment";
+import PageTitle from "../PageTitle";
 
 export default class AllNews extends Component {
   constructor(props) {
     super(props);
+
+    // initial state
     this.state = {
       isLoaded: false,
       reports: [],
     };
   }
 
+  // API call
   componentDidMount() {
     fetch("https://api.coronatracker.com/news/trending")
       .then((res) => res.json())
@@ -32,15 +36,23 @@ export default class AllNews extends Component {
     let { reports, isLoaded } = this.state;
     let newsReports = Object.values(reports);
 
+    // show loading while data is being fetched
     if (!isLoaded) {
       return (
         <div className="text-center">
-          <Loading />
+          <Loading name="Trending News" />
         </div>
       );
     } else {
+
+      // data from API displayed after fetch is complete
       return (
         <Row className="all-news">
+
+          {/* page title */}
+          <PageTitle title="Trending News" />
+
+          {/* news report */}
           {newsReports[1].map((report) => (
             <Col xs={12} sm={12} md={6} lg={4}>
               <Card style={{ width: "100%" }}>
