@@ -6,12 +6,15 @@ import NumberFormat from "react-number-format";
 export default class CountriesReport extends Component {
   constructor(props) {
     super(props);
+
+    // initial start
     this.state = {
       reports: [],
       isLoaded: false,
     };
   }
 
+  // API call
   componentDidMount() {
     fetch("https://api.coronatracker.com/v3/stats/worldometer/country")
       .then((res) => res.json())
@@ -36,7 +39,7 @@ export default class CountriesReport extends Component {
     if (!isLoaded) {
       return (
         <div className="text-center">
-          <Loading />
+          <Loading name="All Countries" />
         </div>
       );
     } else {

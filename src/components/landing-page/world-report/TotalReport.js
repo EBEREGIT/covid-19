@@ -6,6 +6,8 @@ import Loading from "../../Loading";
 export default class TotalReport extends Component {
   constructor(props) {
     super(props);
+
+    // initial state
     this.state = {
       report: [],
       isLoaded: false,
@@ -32,13 +34,16 @@ export default class TotalReport extends Component {
   render() {
     let { report, isLoaded } = this.state;
 
+    // display a loading message while reports are being fetched
     if (!isLoaded) {
       return (
         <div className="text-center">
-          <Loading />
+          <Loading name="World" />
         </div>
       );
     } else {
+
+      // display reports if they are ready
       return (
         <Col
           xs={12}
@@ -52,6 +57,7 @@ export default class TotalReport extends Component {
             <p>Total Confirmed Corona Cases</p>
 
             <h3>
+              {/* total comfirmed world wide */}
               <NumberFormat
                 value={report.totalConfirmed}
                 displayType={"text"}
@@ -68,6 +74,8 @@ export default class TotalReport extends Component {
                 <td id="active-cases">
                   <li>Active Cases</li>
                 </td>
+
+                {/* total Active cases world wide */}
                 <td>
                   <NumberFormat
                     value={report.totalActiveCases}
@@ -81,6 +89,8 @@ export default class TotalReport extends Component {
                 <td id="recovered">
                   <li>Recovered</li>
                 </td>
+
+                {/* total recovered world wide */}
                 <td>
                   <NumberFormat
                     value={report.totalRecovered}
@@ -94,6 +104,8 @@ export default class TotalReport extends Component {
                 <td id="deaths">
                   <li>Deaths</li>
                 </td>
+
+                {/* total deaths world wide */}
                 <td>
                   <NumberFormat
                     value={report.totalDeaths}

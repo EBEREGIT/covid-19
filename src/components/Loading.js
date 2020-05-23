@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Button, Spinner } from "react-bootstrap/";
 
-export default function Loading() {
+export default function Loading(props) {
   return (
     <Fragment>
       <Button variant="danger" disabled>
@@ -12,7 +12,7 @@ export default function Loading() {
           role="status"
           aria-hidden="true"
         />
-        Please Stay Safe. Statistics Coming Up...
+        Please Stay Safe. {props.name} Statistics Coming Up...
       </Button>
     </Fragment>
   );

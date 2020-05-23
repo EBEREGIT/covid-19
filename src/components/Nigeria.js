@@ -11,6 +11,8 @@ import Footer from "./Footer";
 export default class Nigeria extends Component {
   constructor(props) {
     super(props);
+
+    // set initial state
     this.state = {
       reports: [],
       isLoaded: false,
@@ -45,12 +47,15 @@ export default class Nigeria extends Component {
     // extract the states here
     for (let rep in nigeriaReports) {
       if (rep === "states") {
+        // collect eact state report 
         stateReport[rep] = nigeriaReports[rep];
       } else {
+        // colloect total report on Nigeria 
         totalNigeriaReport[rep] = nigeriaReports[rep];
       }
     }
 
+    // convert the states report to an array
     let stateReports = Object.values(stateReport)[0];
 
     // get total active
@@ -58,13 +63,16 @@ export default class Nigeria extends Component {
         totalActive += stateReports[active].casesOnAdmission;
     }
 
+    // display a loading message while reports are being fetched
     if (!isLoaded) {
       return (
         <div className="text-center">
-          <Loading />
+          <Loading name="Nigeria" />
         </div>
       );
     } else {
+
+      // display reports if they are ready
       return (
         <Container className="nigeria">
             <h2 className="text-center">Nigeria Report</h2>
