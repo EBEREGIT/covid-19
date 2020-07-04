@@ -12,6 +12,7 @@ import NumberFormat from "react-number-format";
 import Moment from "react-moment";
 import LandingPage from "./components/LandingPage";
 import News from "./components/News";
+import NotFound from "./components/NotFound";
 
 export default class App extends Component {
   constructor(props) {
@@ -171,8 +172,8 @@ export default class App extends Component {
           <Route path="/countries" component={CountriesReport} />
           <Route path="/trending" component={TreandingNews} />
           <Route path="/nigeria" component={Nigeria} />
-
           <Route path="/news" component={News} />
+          <Route path="*" component={NotFound} />
         </Switch>
       </div>
     );

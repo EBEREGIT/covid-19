@@ -8,6 +8,16 @@ html{
 body {
     font-family: $font-varela !important;
 
+    // 404 not found
+    #not-found{
+        margin-top: 50px;
+        h1{
+            font-size: 10rem;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+
     // nigeria
     @import "./SCSS/nigeria.scss";
     

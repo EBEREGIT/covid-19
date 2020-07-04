@@ -17,7 +17,6 @@ export default class NavComponent extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log(event.target.value);
     // function to be created in the App component
     this.props.handleSearch(this.state);
   }
