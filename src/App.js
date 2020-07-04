@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import "./App.scss";
 import { Switch, Route } from "react-router-dom";
-import GlobalReport from "./components/GlobalReport";
 import NavComponent from "./components/NavComponent";
-import CountriesReport from "./components/CountriesReport";
-import TreandingNews from "./components/TreandingNews";
 import Nigeria from "./components/Nigeria";
 import { capitalize } from "./components/Helper";
 import { Col, Card, ListGroup } from "react-bootstrap/";
@@ -168,9 +165,6 @@ export default class App extends Component {
 
         <Switch>
           <Route exact path="/" component={LandingPage} />
-          <Route path="/global" component={GlobalReport} />
-          <Route path="/countries" component={CountriesReport} />
-          <Route path="/trending" component={TreandingNews} />
           <Route path="/nigeria" component={Nigeria} />
           <Route path="/news" component={News} />
           <Route path="*" component={NotFound} />
