@@ -2,41 +2,23 @@ import React, { Component } from "react";
 import { Row, Col, Button, Form } from "react-bootstrap/";
 import Loading from "../Loading";
 import NumberFormat from "react-number-format";
+import { fetchCountries } from "../../Redux/Action/newsAction";
+import { connect } from "react-redux";
 
-export default class CountriesReport extends Component {
-  constructor(props) {
-    super(props);
-
-    // initial start
-    this.state = {
-      reports: [],
-      isLoaded: false,
-    };
-  }
-
+class CountriesReport extends Component {
   // API call
   componentDidMount() {
-    fetch("https://api.coronatracker.com/v3/stats/worldometer/country")
-      .then((res) => res.json())
-      .then((json) => {
-        this.setState({
-          reports: json,
-          isLoaded: true,
-        });
-      })
-      .catch((error) => {
-        this.setState({
-          error,
-        });
-      });
+    this.props.dispatch(fetchCountries());
   }
 
   render() {
-    let { reports, isLoaded } = this.state;
+    let { reports, loading } = this.props;
     let counter = 1;
 
+    console.log(reports)
+
     // show loading while data is being fetched
-    if (!isLoaded) {
+    if (loading) {
       return (
         <div className="text-center">
           <Loading name="All Countries" />
@@ -198,3 +180,12 @@ export default class CountriesReport extends Component {
     }
   }
 }
+
+// Map Redux state to React component props
+const mapStateToProps = (state) => ({
+  loading: state.countries.loading,
+  reports: state.countries.news,
+  hasErrors: state.countries.hasErrors,
+});
+
+export default connect(mapStateToProps)(CountriesReport)

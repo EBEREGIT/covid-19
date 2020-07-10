@@ -20,7 +20,7 @@ export const getNewsFailure = () => ({
   type: GET_NEWS_FAILURE,
 });
 
-// Combine them all in an asynchronous thunk
+// News = Combine them all in an asynchronous thunk
 export function fetchNews() {
   return async (dispatch) => {
     // execute the getNews action
@@ -31,6 +31,48 @@ export function fetchNews() {
       const response = await fetch(
         "https://api.coronatracker.com/news/trending"
       );
+      const data = await response.json();
+
+      // execute getNewsuccess action
+      dispatch(getNewsSuccess(data));
+    } catch (error) {
+      // execute getNewsFailure action
+      dispatch(getNewsFailure());
+    }
+  };
+}
+
+// Countries = Combine them all in an asynchronous thunk
+export function fetchCountries() {
+  return async (dispatch) => {
+    // execute the getNews action
+    dispatch(getNews());
+
+    try {
+      // make API call
+      const response = await fetch(
+        "https://api.coronatracker.com/v3/stats/worldometer/country"
+      );
+      const data = await response.json();
+
+      // execute getNewsuccess action
+      dispatch(getNewsSuccess(data));
+    } catch (error) {
+      // execute getNewsFailure action
+      dispatch(getNewsFailure());
+    }
+  };
+}
+
+// Nigeria = Combine them all in an asynchronous thunk
+export function fetchNigeria() {
+  return async (dispatch) => {
+    // execute the getNews action
+    dispatch(getNews());
+
+    try {
+      // make API call
+      const response = await fetch("https://covidnigeria.herokuapp.com/api");
       const data = await response.json();
 
       // execute getNewsuccess action

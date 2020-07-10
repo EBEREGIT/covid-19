@@ -1,9 +1,14 @@
 // Import all actions
 import * as actions from "../Action/newsAction";
-import { initialState } from "../initialState";
+export const initialState = {
+    world: [],
+    loading: false,
+    hasErrors: false,
+  };
+  
 
 // newsReducer
-export default function newsReducer(state = initialState, action) {
+export default function worldReducer(state = initialState, action) {
   // loop through action type
   switch (action.type) {
     // action = get_NEWS
@@ -13,7 +18,7 @@ export default function newsReducer(state = initialState, action) {
     // action = get_NEWS_success
     case actions.GET_NEWS_SUCCESS:
       return {
-        news: action.payload,
+        world: action.payload,
         loading: false,
         hasErrors: false,
       };

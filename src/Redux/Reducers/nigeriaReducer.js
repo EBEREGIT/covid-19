@@ -1,9 +1,9 @@
 // Import all actions
 import * as actions from "../Action/newsAction";
-import { initialState } from "../initialState";
+import { initialState } from "../initialState"
 
 // newsReducer
-export default function newsReducer(state = initialState, action) {
+export default function nigeriaReducer(state = initialState, action) {
   // loop through action type
   switch (action.type) {
     // action = get_NEWS

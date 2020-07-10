@@ -4,42 +4,23 @@ import NumberFormat from "react-number-format";
 import Loading from "./Loading";
 import Footer from "./Footer";
 import PageTitle from "./PageTitle";
+import { fetchNigeria } from "../Redux/Action/newsAction";
+import { connect } from "react-redux";
 
-export default class Nigeria extends Component {
-  constructor(props) {
-    super(props);
-
-    // set initial state
-    this.state = {
-      reports: [],
-      isLoaded: false,
-    };
-  }
-
+class Nigeria extends Component {
   // fetch states from API
   componentDidMount() {
-    fetch("https://covidnigeria.herokuapp.com/api")
-      .then((res) => res.json())
-      .then((json) => {
-        this.setState({
-          reports: json,
-          isLoaded: true,
-        });
-      })
-      .catch((error) => {
-        this.setState({
-          error,
-        });
-      });
+    this.props.dispatch(fetchNigeria())
   }
 
   render() {
-    let { reports, isLoaded } = this.state;
+    let { reports, loading } = this.props;
     let nigeriaReports = reports.data;
     let stateReport = {};
     let totalNigeriaReport = {};
     let totalActive = 0;
     let counter = 1;
+    let nigeriaStatesReport = [];
 
     // extract the states here
     for (let rep in nigeriaReports) {
@@ -54,6 +35,9 @@ export default class Nigeria extends Component {
 
     // convert the states report to an array
     let stateReports = Object.values(stateReport)[0];
+    for (let states in stateReports){
+      nigeriaStatesReport.push(stateReports[states])
+    }
 
     // get total active
     for (let active in stateReports) {
@@ -61,7 +45,7 @@ export default class Nigeria extends Component {
     }
 
     // display a loading message while reports are being fetched
-    if (!isLoaded) {
+    if (loading) {
       return (
         <div className="text-center">
           <Loading name="Nigeria" />
@@ -170,7 +154,7 @@ export default class Nigeria extends Component {
             </Col>
 
             {/* individual states */}
-            {stateReports.map((report) => (
+            {nigeriaStatesReport.map((report) => (
               <Col xs={12} sm={12} md={4} lg={4}>
                 <table id="each-countries">
                   <tr>
@@ -261,3 +245,12 @@ export default class Nigeria extends Component {
     }
   }
 }
+
+// Map Redux state to React component props
+const mapStateToProps = (state) => ({
+  loading: state.nigeria.loading,
+  reports: state.nigeria.news,
+  hasErrors: state.nigeria.hasErrors,
+});
+
+export default connect(mapStateToProps)(Nigeria)
