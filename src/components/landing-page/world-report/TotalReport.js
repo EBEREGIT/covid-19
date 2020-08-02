@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import NumberFormat from "react-number-format";
-import { Row, Col, Table, Button } from "react-bootstrap/";
+import { Row, Col, Table } from "react-bootstrap/";
 import Loading from "../../Loading";
 
 export default class TotalReport extends Component {
@@ -139,7 +139,7 @@ export default class TotalReport extends Component {
           </Table>
 
           <Row id="btn-see-all">
-            <Button className="text-center">See All Countries</Button>
+            <a href="/#countries-section" className="btn text-center">See All Countries</a>
           </Row>
           
         </Col>

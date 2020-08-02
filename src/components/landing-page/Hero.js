@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Button } from "react-bootstrap/";
+import { Row, Col } from "react-bootstrap/";
 import Map from "./Map.js";
 
 export default function Hero() {
@@ -10,7 +10,7 @@ export default function Hero() {
         <h1>Corona Virus</h1>
         <p>Tracker</p>
 
-        <Button>View Statistics</Button>
+        <a className="btn" href="/#world-section">View Statistics</a>
       </Col>
 
       {/* map image or background */}
